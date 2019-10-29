@@ -1,0 +1,11 @@
+<form action="home" method="POST">
+    <input type="text" id="loginNickname" name="loginNickname" placeholder="Nickname" required/>
+    <input type="password" id="loginPassword" name="loginPassword" placeholder="Password" required/>
+    <input type="submit" id="login" name="login" value="Login" />
+    <a href="signUp" id="signInLink">Sign Up</a>
+</form>
+{{ auth }}
+<div id="welcome">
+    <a href="home">Home</a>
+    <a href="scores">Best Scores</a>
+</div>

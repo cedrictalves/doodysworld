@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Doody's World is platform game, end the levels as fast as you can to be the best in the world!" />
+    <title>Doody's World - Sign Up</title>
+    <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+       <a href="home"><img src="assets/img/imgWeb/logo.png" id="up" alt="LogoDoodysWorld"></a>
+       <span class="headerHomeScoreLink"><a href="home">Home</a></span>
+    </header>
+
+    <h1>Sign Up now!</h1>
+    <h3>With a registred account you will be able to save all your best scores!</h3>
+
+        {{ message }}
+    
+    <form id="signInForm" action="signUp" method="POST">
+        <label for=signInNickname>Nickname</label>
+        <input type="text" placeholder="..." id="signInNickname" name="signInNickname" required minlength="3" maxlength="50" onblur="check('Nickname')" /><div id="NicknameValidator" ></div>
+        <label for=signInEmail>Email</label>
+        <input type="email" placeholder="..." id="signInEmail" name="signInEmail" required minlength="6" maxlength="50"  onblur="check('Email')"/><div id="EmailValidator" ></div>
+        <label for=signInPassword>Password</label>
+        <input type="password" placeholder="..." id="signInPassword" name="signInPassword" required minlength="6" maxlength="50" onblur="checkPass()" onfocus="cleanMessage()" />
+        <label for=signInPassword2>Confirm your Password</label>
+        <input type="password" placeholder="..." id="signInPassword2" name="signInPassword2" onblur="checkPass()" onfocus="cleanMessage()" required minlength="6" maxlength="50"/>
+        <div  id="passwordVerif"></div>
+        <input disabled type="submit" id="signIn" name="signIn" value="Sign Up" />
+    </form>
+    <!-- footer -->
+    {{ footer }}
+</body>
+</html>
